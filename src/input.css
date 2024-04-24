@@ -8,4 +8,24 @@
     * {
         @apply font-kumbh-sans;
     }
+
+    img {
+        @apply w-full h-full object-cover;
+    }
+
+    .container {
+        @apply max-w-full;
+    }
+
+    header .col {
+        @apply flex items-center;
+    }
+
+    .mobile-menu-list li:not(:last-child) {
+        @apply mb-5;
+    }
+
+    .mobile-menu-list a {
+        @apply font-bold block;
+    }
 }

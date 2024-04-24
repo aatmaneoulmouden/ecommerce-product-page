@@ -2,6 +2,12 @@
 module.exports = {
   content: ["./**/*{.html,js}"],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '18px',
+      },
+    },
     fontFamily: {
       'kumbh-sans': ["Kumbh Sans", "sans-serif"],
     },
