@@ -32,4 +32,8 @@
     .desktop-menu a {
         @apply text-dark-grayish-blue;
     }
+
+    .product-swiper-nav {
+        @apply w-10 h-10 flex justify-center items-center rounded-full bg-white;
+    }
 }
