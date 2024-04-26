@@ -28,4 +28,8 @@
     .mobile-menu-list a {
         @apply font-bold block;
     }
+
+    .desktop-menu a {
+        @apply text-dark-grayish-blue;
+    }
 }

@@ -27,9 +27,9 @@
 
   <header>
     <div class="container">
-      <div class="row flex justify-between items-center py-5">
-        <div class="col left gap-4">
-          <button class="menu-toggler open-menu" id="open-menu" name="Open mobile menu">
+      <div class="row flex justify-between items-center py-5 md:py-8 border-b border-grayish-blue">
+        <div class="col left gap-4 md:gap-12">
+          <button class="menu-toggler open-menu block md:hidden" id="open-menu" name="Open mobile menu">
             <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
               <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd" />
             </svg>
@@ -41,8 +41,8 @@
                 fill="#1D2026" fill-rule="nonzero" />
             </svg>
           </a>
-          <nav class="desktop-menu hidden">
-            <ul class="desktop-menu-list">
+          <nav class="desktop-menu hidden md:block">
+            <ul class="desktop-menu-list flex items-center gap-7">
               <li>
                 <a href="">Collections</a>
               </li>
@@ -93,7 +93,7 @@
             </nav>
           </div>
         </div>
-        <div class="col right gap-5">
+        <div class="col right gap-5 md:gap-12">
           <div class="card-wrapper">
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -101,7 +101,7 @@
                 fill="#69707D" fill-rule="nonzero" />
             </svg>
           </div>
-          <div class="profile-avatar-wrapper w-6 h-6">
+          <div class="profile-avatar-wrapper w-6 h-6 md:w-12 md:h-12">
             <img src="./assets/images/image-avatar.png" alt="Image Avatar">
           </div>
         </div>
