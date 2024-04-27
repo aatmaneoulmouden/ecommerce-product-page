@@ -16,6 +16,26 @@ function openColseMobileMenu() {
 openColseMobileMenu();
 
 
+// Update QTY
+function handleQty() {
+    const qty = document.querySelector('#qty');
+    const addBtn = document.querySelector('#qty-plus');
+    const minusBtn = document.querySelector('#qty-minus');
+
+    addBtn.addEventListener('click', () => {
+        qty.value++;
+    });
+
+    minusBtn.addEventListener('click', () => {
+        if (qty.value > 0) {
+            qty.value--;
+        }
+    });
+}
+
+handleQty()
+
+
 // Mobile product gallery
 var swiper = new Swiper(".mobileProductGallery", {
     navigation: {
