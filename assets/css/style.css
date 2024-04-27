@@ -962,6 +962,10 @@ header .col{
   width: 100%;
 }
 
+.max-w-full{
+  max-width: 100%;
+}
+
 .flex-shrink{
   flex-shrink: 1;
 }
@@ -2136,6 +2140,11 @@ header .col{
   padding-bottom: 0.25rem;
 }
 
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2151,8 +2160,28 @@ header .col{
   padding-bottom: 1.25rem;
 }
 
+.pb-8{
+  padding-bottom: 2rem;
+}
+
+.pt-14{
+  padding-top: 3.5rem;
+}
+
 .pt-5{
   padding-top: 1.25rem;
+}
+
+.pb-2{
+  padding-bottom: 0.5rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.pb-1{
+  padding-bottom: 0.25rem;
 }
 
 .text-left{
