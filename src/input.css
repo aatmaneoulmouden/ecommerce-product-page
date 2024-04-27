@@ -13,6 +13,12 @@
         @apply w-full h-full object-cover;
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
     .container {
         @apply max-w-full;
     }
@@ -37,7 +43,26 @@
         @apply w-10 h-10 flex justify-center items-center rounded-full bg-white;
     }
 
-    .title, .current-price {
-        @apply text-very-dark-blue text-3xl font-bold lg:text-5xl;
+    .title,
+    .current-price {
+        @apply text-very-dark-blue text-3xl font-bold lg:text-4xl;
+    }
+
+    .productThumbnailSwiper .swiper-slide {
+        @apply rounded-lg overflow-hidden cursor-pointer;
+    }
+
+    .swiper-slide.swiper-slide-thumb-active {
+        @apply border-2 border-orange relative;
+    }
+
+    .swiper-slide.swiper-slide-thumb-active::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6); 
     }
 }

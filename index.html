@@ -28,7 +28,7 @@
 
   <header>
     <div class="container">
-      <div class="row flex justify-between items-center py-5 md:py-8 lg:border-b border-grayish-blue">
+      <div class="row flex justify-between items-center py-5 md:h-24 lg:border-b border-grayish-blue">
         <div class="col left gap-4 md:gap-12">
           <button class="menu-toggler open-menu block lg:hidden" id="open-menu" name="Open mobile menu">
             <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +65,7 @@
           <div class="mobile-menu-wrapper fixed top-0 left-0 w-full h-full bg-black/75 z-20 hidden" id="mobile-menu">
             <nav class="mobile-menu fixed top-0 left-0 w-[70%] h-full bg-white">
               <div class="container">
-                <button class="menu-toggler open-menu h-16 flex justify-start items-center md:h-28" id="close-menu"
+                <button class="menu-toggler open-menu h-16 flex justify-start items-center md:h-24" id="close-menu"
                   name="Close mobile menu">
                   <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -109,7 +109,8 @@
       </div>
     </div>
   </header>
-  <main>
+
+  <main style="height: calc(100vh - 96px);">
     <section class="mobile-product-gallery lg:hidden">
       <div class="swiper mobileProductGallery relative">
         <div class="swiper-wrapper">
@@ -146,18 +147,52 @@
     </section>
 
     <div class="container">
-      <div class="row grid lg:grid-cols-2">
-        <div class="col swiper hidden lg:block">
-          hello
+      <div class="row grid justify-center items-center lg:grid-cols-2 lg:gap-x-20 lg:py-12">
+        <div class="col desktop-swiper w-[400px] hidden lg:block lg:ml-auto">
+          <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+            class="swiper productImagesPreview rounded-2xl">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-1.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-2.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-3.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-4.jpg" alt="Product image" class="product-img">
+              </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
+          <div thumbsSlider="" class="swiper productThumbnailSwiper pt-7">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-1-thumbnail.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-2-thumbnail.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-3-thumbnail.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-4-thumbnail.jpg" alt="Product image" class="product-img">
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col data pt-5">
+        <div class="col data pt-5 max-w-[460px]">
           <span class="brand text-orange uppercase text-sm font-bold">Sneaker Company</span>
-          <h1 class="title my-3 lg:mt-4 lg:mb-6">Fall Limited Edition Sneakers</h1>
+          <h1 class="title my-3 lg:mt-4 lg:mb-5">Fall Limited Edition Sneakers</h1>
           <p class="desciption text-dark-grayish-blue">These low-profile sneakers are your perfect casual wear
             companion. Featuring a
             durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-          <div class="pricing mt-8 flex flex-wrap justify-between items-center">
+          <div class="pricing mt-7 flex flex-wrap justify-between items-center">
             <div class="left flex items-center gap-4 lg:w-full">
               <h1 class="current-price">$125.00</h1>
               <span class="discount text-orange text-xs py-1 px-2 rounded-sm font-bold bg-orange/30">50%</span>
@@ -167,8 +202,9 @@
             </div>
           </div>
 
-          <div class="take-action mt-8 grid items-center grid-cols-1 gap-y-6 lg:grid-cols-3 lg:gap-x-3 lg:mt-12">
-            <div class="qty-wrapper h-14 bg-light-grayish-blue rounded-md py-3 px-6 flex justify-between items-center lg:col-span-1">
+          <div class="take-action mt-7 grid items-center grid-cols-1 gap-y-6 lg:grid-cols-3 lg:gap-x-3 lg:mt-12">
+            <div
+              class="qty-wrapper h-14 bg-light-grayish-blue rounded-md py-3 px-6 flex justify-between items-center lg:col-span-1">
               <button class="qty-control minus" id="qty-minus">
                 <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">

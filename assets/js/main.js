@@ -43,3 +43,22 @@ var swiper = new Swiper(".mobileProductGallery", {
         prevEl: ".product-swiper-button-prev",
     },
 });
+
+// Desktop product gallery
+var productThumbnailSwiper = new Swiper(".productThumbnailSwiper", {
+    spaceBetween: 28,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var productImagesPreview = new Swiper(".productImagesPreview", {
+    spaceBetween: 0,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: productThumbnailSwiper,
+    },
+});
