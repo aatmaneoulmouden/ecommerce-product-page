@@ -36,4 +36,8 @@
     .product-swiper-nav {
         @apply w-10 h-10 flex justify-center items-center rounded-full bg-white;
     }
+
+    .title, .current-price {
+        @apply text-very-dark-blue text-3xl font-bold;
+    }
 }
