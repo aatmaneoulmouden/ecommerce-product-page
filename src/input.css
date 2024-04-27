@@ -38,6 +38,6 @@
     }
 
     .title, .current-price {
-        @apply text-very-dark-blue text-3xl font-bold;
+        @apply text-very-dark-blue text-3xl font-bold lg:text-5xl;
     }
 }

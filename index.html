@@ -28,9 +28,9 @@
 
   <header>
     <div class="container">
-      <div class="row flex justify-between items-center py-5 md:py-8 md:border-b border-grayish-blue">
+      <div class="row flex justify-between items-center py-5 md:py-8 lg:border-b border-grayish-blue">
         <div class="col left gap-4 md:gap-12">
-          <button class="menu-toggler open-menu block md:hidden" id="open-menu" name="Open mobile menu">
+          <button class="menu-toggler open-menu block lg:hidden" id="open-menu" name="Open mobile menu">
             <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
               <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd" />
             </svg>
@@ -42,7 +42,7 @@
                 fill="#1D2026" fill-rule="nonzero" />
             </svg>
           </a>
-          <nav class="desktop-menu hidden md:block">
+          <nav class="desktop-menu hidden lg:block">
             <ul class="desktop-menu-list flex items-center gap-7">
               <li>
                 <a href="">Collections</a>
@@ -65,7 +65,7 @@
           <div class="mobile-menu-wrapper fixed top-0 left-0 w-full h-full bg-black/75 z-20 hidden" id="mobile-menu">
             <nav class="mobile-menu fixed top-0 left-0 w-[70%] h-full bg-white">
               <div class="container">
-                <button class="menu-toggler open-menu h-16 flex justify-start items-center" id="close-menu"
+                <button class="menu-toggler open-menu h-16 flex justify-start items-center md:h-28" id="close-menu"
                   name="Close mobile menu">
                   <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -110,7 +110,7 @@
     </div>
   </header>
   <main>
-    <section class="mobile-product-gallery">
+    <section class="mobile-product-gallery lg:hidden">
       <div class="swiper mobileProductGallery relative">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -146,29 +146,29 @@
     </section>
 
     <div class="container">
-      <div class="row">
-        <div class="col swiper hidden">
+      <div class="row grid lg:grid-cols-2">
+        <div class="col swiper hidden lg:block">
           hello
         </div>
         <div class="col data pt-5">
           <span class="brand text-orange uppercase text-sm font-bold">Sneaker Company</span>
-          <h1 class="title my-3">Fall Limited Edition Sneakers</h1>
+          <h1 class="title my-3 lg:mt-4 lg:mb-6">Fall Limited Edition Sneakers</h1>
           <p class="desciption text-dark-grayish-blue">These low-profile sneakers are your perfect casual wear
             companion. Featuring a
             durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
 
-          <div class="pricing mt-8 flex justify-between items-center">
-            <div class="left flex items-center gap-4">
+          <div class="pricing mt-8 flex flex-wrap justify-between items-center">
+            <div class="left flex items-center gap-4 lg:w-full">
               <h1 class="current-price">$125.00</h1>
               <span class="discount text-orange text-xs py-1 px-2 rounded-sm font-bold bg-orange/30">50%</span>
             </div>
-            <div class="right">
+            <div class="right lg:pt-2">
               <del class="prev-price text-grayish-blue text-lg font-bold">$250.00</del>
             </div>
           </div>
 
-          <div class="take-action">
-            <div class="qty-wrapper bg-light-grayish-blue rounded-md py-3 px-6 mt-8 flex justify-between items-center">
+          <div class="take-action mt-8 grid items-center grid-cols-1 gap-y-6 lg:grid-cols-3 lg:gap-x-3 lg:mt-12">
+            <div class="qty-wrapper h-14 bg-light-grayish-blue rounded-md py-3 px-6 flex justify-between items-center lg:col-span-1">
               <button class="qty-control minus" id="qty-minus">
                 <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -182,7 +182,7 @@
               </button>
 
               <input type="number"
-                class="qty text-center text-lg bg-transparent text-very-dark-blue font-bold outline-none" id="qty"
+                class="qty text-center text-lg bg-transparent text-very-dark-blue font-bold outline-none w-16" id="qty"
                 min="0" value="0" readonly>
 
               <button class="qty-control plus" id="qty-plus">
@@ -197,8 +197,9 @@
                 </svg>
               </button>
             </div>
+
             <button
-              class="bg-orange text-white w-full rounded-lg py-4 flex justify-center items-center gap-4 font-medium mt-6 shadow-main">
+              class="bg-orange text-white w-full rounded-lg py-4 flex justify-center items-center gap-4 font-medium shadow-main lg:col-span-2">
               <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
