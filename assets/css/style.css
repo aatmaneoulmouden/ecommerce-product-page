@@ -581,8 +581,8 @@ video {
 @media (min-width: 1024px){
   .container{
     max-width: 1024px;
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 }
 
@@ -687,6 +687,12 @@ header .col{
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 1024px) {
+  main {
+    height: calc(100vh - 96px);
+  }
 }
 
 .sr-only{
@@ -2217,12 +2223,8 @@ header .col{
   padding-bottom: 1.25rem;
 }
 
-.pb-1{
-  padding-bottom: 0.25rem;
-}
-
-.pb-8{
-  padding-bottom: 2rem;
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .pt-14{
@@ -2235,10 +2237,6 @@ header .col{
 
 .pt-7{
   padding-top: 1.75rem;
-}
-
-.pt-8{
-  padding-top: 2rem;
 }
 
 .text-left{
@@ -2808,8 +2806,8 @@ header .col{
   @media (min-width: 1024px){
     .sm\:container{
       max-width: 1024px;
-      padding-right: 4rem;
-      padding-left: 4rem;
+      padding-right: 8rem;
+      padding-left: 8rem;
     }
   }
 
@@ -2873,6 +2871,11 @@ header .col{
 
   .md\:gap-12{
     gap: 3rem;
+  }
+
+  .md\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2938,6 +2941,10 @@ header .col{
   .lg\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:pt-0{
+    padding-top: 0px;
   }
 
   .lg\:pt-2{

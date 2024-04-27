@@ -7,7 +7,7 @@ module.exports = {
       padding: {
         DEFAULT: '18px',
         md: '2rem',
-        lg: '4rem',
+        lg: '8rem',
       },
     },
     fontFamily: {
@@ -16,10 +16,6 @@ module.exports = {
     boxShadow: {
       'main': '0px 48px 100px 0px hsl(25, 100%, 94%)',
     },
-    // screens: {
-    //   'desktop': '1024px',
-    //   // => @media (min-width: 1280px) { ... }
-    // },
     extend: {
       colors: {
         // Primary
