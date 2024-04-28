@@ -19,6 +19,10 @@
         margin: 0;
     }
 
+    .custom-transition {
+        @apply transition ease-in-out delay-150;
+    }
+
     .container {
         @apply max-w-full;
     }
@@ -48,7 +52,8 @@
         @apply text-very-dark-blue text-3xl font-bold lg:text-4xl;
     }
 
-    .productThumbnailSwiper .swiper-slide {
+    .productThumbnailSwiper .swiper-slide,
+    .lightboxThumbnails .swiper-slide {
         @apply rounded-lg overflow-hidden cursor-pointer;
     }
 
@@ -64,6 +69,18 @@
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .close-lightbox:hover path {
+        fill: hsl(26, 100%, 55%);
+    }
+
+    .swiper-lightbox-control {
+        @apply w-12 h-12 rounded-full flex justify-center items-center bg-white absolute top-1/2 -translate-y-1/2 z-30;
+    }
+
+    .swiper-lightbox-control:hover path {
+        stroke: hsl(26, 100%, 55%);
     }
 
     @media (min-width: 1024px) {

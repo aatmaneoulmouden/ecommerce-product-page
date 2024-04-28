@@ -111,6 +111,7 @@
   </header>
 
   <main>
+    <!-- ========== Start Mobile Product Gallery Section ========== -->
     <section class="mobile-product-gallery lg:hidden">
       <div class="swiper mobileProductGallery relative">
         <div class="swiper-wrapper">
@@ -145,12 +146,15 @@
         </div>
       </div>
     </section>
+    <!-- ========== End Mobile Product Gallery Section ========== -->
+
 
     <div class="container">
       <div class="row grid justify-center items-center lg:grid-cols-2 lg:gap-x-20 lg:py-12">
+        <!-- ========== Start Desktop Product Gallery Column ========== -->
         <div class="col desktop-swiper w-[400px] hidden lg:block lg:ml-auto">
           <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-            class="swiper productImagesPreview rounded-2xl">
+            class="swiper productImagesPreview rounded-2xl cursor-pointer">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="./assets/images/image-product-1.jpg" alt="Product image" class="product-img">
@@ -165,8 +169,6 @@
                 <img src="./assets/images/image-product-4.jpg" alt="Product image" class="product-img">
               </div>
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
           </div>
           <div thumbsSlider="" class="swiper productThumbnailSwiper pt-7">
             <div class="swiper-wrapper">
@@ -185,6 +187,9 @@
             </div>
           </div>
         </div>
+        <!-- ========== End Desktop Product Gallery Column ========== -->
+
+        <!-- ========== Start Product Info Column ========== -->
         <div class="col data pt-5 max-w-[460px]">
           <span class="brand text-orange uppercase text-sm font-bold">Sneaker Company</span>
           <h1 class="title my-3 lg:mt-4 lg:mb-5">Fall Limited Edition Sneakers</h1>
@@ -245,8 +250,73 @@
             </button>
           </div>
         </div>
+        <!-- ========== End Product Info Column ========== -->
       </div>
     </div>
+
+    <!-- ========== Start Lightbox Section ========== -->
+    <section
+      class="lightbox-wrapper fixed top-0 left-0 w-full h-screen bg-black/75 z-20 overscroll-none hidden justify-center items-center"
+      id="lightbox">
+      <div class="lightbox-swiper w-[460px]">
+        <button class="close-lightbox block ml-auto mb-5" id="close-lightbox">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path class="scale-[1.4] custom-transition"
+              d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+              fill="#FFFFFF" fill-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="w-[460px] relative">
+          <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+            class="swiper lightboxPreview rounded-2xl">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-1.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-2.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-3.jpg" alt="Product image" class="product-img">
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/image-product-4.jpg" alt="Product image" class="product-img">
+              </div>
+            </div>
+          </div>
+          <div class="lightbox-controls">
+            <span class="swiper-lightbox-control swiper-lightbox-prev -left-6">
+              <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path class="custom-transition" d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+              </svg>
+            </span>
+            <span class="swiper-lightbox-control swiper-lightbox-next -right-6">
+              <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path class="custom-transition" d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div thumbsSlider="" class="swiper lightboxThumbnails pt-7">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/image-product-1-thumbnail.jpg" alt="Product image" class="product-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/image-product-2-thumbnail.jpg" alt="Product image" class="product-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/image-product-3-thumbnail.jpg" alt="Product image" class="product-img">
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/image-product-4-thumbnail.jpg" alt="Product image" class="product-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== End Lightbox Section ========== -->
+
   </main>
 
   <footer>

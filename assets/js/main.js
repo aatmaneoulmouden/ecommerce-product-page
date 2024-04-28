@@ -33,7 +33,31 @@ function handleQty() {
     });
 }
 
-handleQty()
+handleQty();
+
+
+// Open/close the lightbox
+function lightboxHandler() {
+    const openLightboxBtns = document.querySelectorAll('.productImagesPreview .swiper-slide');
+    const closeLightboxBtn = document.querySelector('#close-lightbox');
+    const lightbox = document.querySelector('#lightbox');
+
+    // Open lightbox
+    openLightboxBtns.forEach(slide => {
+        slide.addEventListener('click', () => {
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        });
+    });
+
+    // Close lightbox
+    closeLightboxBtn.addEventListener('click', () => {
+        lightbox.classList.remove('flex');
+        lightbox.classList.add('hidden');
+    });
+}
+
+lightboxHandler();
 
 
 // Mobile product gallery
@@ -60,5 +84,25 @@ var productImagesPreview = new Swiper(".productImagesPreview", {
     },
     thumbs: {
         swiper: productThumbnailSwiper,
+    },
+});
+
+
+// Lightbox swiper
+var lightboxThumbnails = new Swiper(".lightboxThumbnails", {
+    spaceBetween: 28,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var lightboxPreview = new Swiper(".lightboxPreview", {
+    spaceBetween: 0,
+    navigation: {
+        nextEl: ".swiper-lightbox-next",
+        prevEl: ".swiper-lightbox-prev",
+    },
+    thumbs: {
+        swiper: lightboxThumbnails,
     },
 });

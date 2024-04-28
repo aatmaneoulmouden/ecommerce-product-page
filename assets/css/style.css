@@ -615,6 +615,15 @@ input::-webkit-outer-spin-button,
   margin: 0;
 }
 
+.custom-transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-delay: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .container{
   max-width: 100%;
 }
@@ -666,7 +675,8 @@ header .col{
   }
 }
 
-.productThumbnailSwiper .swiper-slide{
+.productThumbnailSwiper .swiper-slide,
+    .lightboxThumbnails .swiper-slide{
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -687,6 +697,30 @@ header .col{
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.close-lightbox:hover path {
+  fill: hsl(26, 100%, 55%);
+}
+
+.swiper-lightbox-control{
+  position: absolute;
+  top: 50%;
+  z-index: 30;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
+}
+
+.swiper-lightbox-control:hover path {
+  stroke: hsl(26, 100%, 55%);
 }
 
 @media (min-width: 1024px) {
@@ -764,6 +798,14 @@ header .col{
 
 .-inset-1{
   inset: -0.25rem;
+}
+
+.-left-6{
+  left: -1.5rem;
+}
+
+.-right-6{
+  right: -1.5rem;
 }
 
 .end-1{
@@ -845,6 +887,14 @@ header .col{
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.ml-auto{
+  margin-left: auto;
 }
 
 .mt-2{
@@ -978,6 +1028,10 @@ header .col{
   height: 100%;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -992,6 +1046,10 @@ header .col{
 
 .w-\[400px\]{
   width: 400px;
+}
+
+.w-\[460px\]{
+  width: 460px;
 }
 
 .w-\[70\%\]{
@@ -1067,6 +1125,12 @@ header .col{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.scale-\[1\.4\]{
+  --tw-scale-x: 1.4;
+  --tw-scale-y: 1.4;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .\!transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
@@ -1085,6 +1149,10 @@ header .col{
 
 .transform-none{
   transform: none;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .touch-auto{
