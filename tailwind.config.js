@@ -13,10 +13,11 @@ module.exports = {
     fontFamily: {
       'kumbh-sans': ["Kumbh Sans", "sans-serif"],
     },
-    boxShadow: {
-      'main': '0px 48px 100px 0px hsl(25, 100%, 94%)',
-    },
     extend: {
+      boxShadow: {
+        'main': '0px 48px 100px 0px hsl(25, 100%, 94%)',
+        'cart': 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+      },
       colors: {
         // Primary
         'orange': 'hsl(26, 100%, 55%)',

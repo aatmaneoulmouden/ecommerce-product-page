@@ -679,6 +679,10 @@ header .col{
   display: block;
 }
 
+.cart-wrapper:hover path {
+  fill: hsl(220, 13%, 13%);
+}
+
 .product-swiper-nav{
   display: flex;
   height: 2.5rem;
@@ -870,12 +874,20 @@ header .col{
   left: 0px;
 }
 
+.left-1\/2{
+  left: 50%;
+}
+
 .top-0{
   top: 0px;
 }
 
 .top-1\/2{
   top: 50%;
+}
+
+.top-12{
+  top: 3rem;
 }
 
 .isolate{
@@ -1098,6 +1110,10 @@ header .col{
   width: 1.5rem;
 }
 
+.w-80{
+  width: 20rem;
+}
+
 .w-\[400px\]{
   width: 400px;
 }
@@ -1172,6 +1188,11 @@ header .col{
 
 .border-separate{
   border-collapse: separate;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-1\/2{
@@ -2324,6 +2345,10 @@ header .col{
      object-fit: scale-down;
 }
 
+.p-4{
+  padding: 1rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2441,17 +2466,16 @@ header .col{
   line-height: 1rem;
 }
 
-.text-7xl{
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
 .font-bold{
   font-weight: 700;
 }
 
 .font-medium{
   font-weight: 500;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .uppercase{
@@ -2738,6 +2762,24 @@ header .col{
   mix-blend-mode: plus-lighter;
 }
 
+.\!shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
+}
+
+.shadow{
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-cart{
+  --tw-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+  --tw-shadow-colored: 0px 5px 15px; var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-main{
   --tw-shadow: 0px 48px 100px 0px hsl(25, 100%, 94%);
   --tw-shadow-colored: 0px 48px 100px 0px var(--tw-shadow-color);
@@ -2992,6 +3034,10 @@ header .col{
 
 .hover\:focus\:text-center:focus:hover{
   text-align: center;
+}
+
+.group:hover .group-hover\:block{
+  display: block;
 }
 
 @media (min-width: 640px){
