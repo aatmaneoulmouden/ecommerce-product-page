@@ -16,7 +16,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'main': '0px 48px 100px 0px hsl(25, 100%, 94%)',
-        'cart': 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
+        'cart': 'rgba(0, 0, 0, 0.2) 0px 10px 20px',
       },
       colors: {
         // Primary
