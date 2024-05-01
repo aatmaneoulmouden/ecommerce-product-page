@@ -31,7 +31,7 @@ Users can:
 
 ### Links
 
-- Solution URL: [See the solution](https://your-solution-url.com)
+- Solution URL: [See the solution](https://www.frontendmentor.io/solutions/responsive-ecommerce-product-page-using-html-tailwindcss-and-js-dmVyd0ofwI)
 - Live Site URL: [Preview the solution](https://aatmaneoulmouden.github.io/ecommerce-product-page/)
 
 ## My process
