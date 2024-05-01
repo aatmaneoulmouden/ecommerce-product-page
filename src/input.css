@@ -46,7 +46,7 @@
     .desktop-menu a::after {
         content: '';
         position: absolute;
-        top: calc(100% + 3px);
+        /* top: calc(100% + 3px); */
         left: 0;
         width: 100%;
         height: 1px;
@@ -115,6 +115,11 @@
 
     .swiper-lightbox-control:hover path {
         stroke: hsl(26, 100%, 55%);
+    }
+
+    .product-in-cart .title,
+    .product-in-cart .single-price {
+        @apply text-base font-normal text-grayish-blue;
     }
 
     @media (min-width: 1024px) {

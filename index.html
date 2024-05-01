@@ -15,17 +15,6 @@
 </head>
 
 <body>
-  <!-- <div class="flex">
-    <div class="w-20 h-20 bg-orange"></div>
-    <div class="w-20 h-20 bg-pale-orange"></div>
-    <div class="w-20 h-20 bg-very-dark-blue"></div>
-    <div class="w-20 h-20 bg-dark-grayish-blue"></div>
-    <div class="w-20 h-20 bg-grayish-blue"></div>
-    <div class="w-20 h-20 bg-light-grayish-blue"></div>
-    <div class="w-20 h-20 bg-white"></div>
-    <div class="w-20 h-20 bg-black"></div>
-  </div> -->
-
   <header>
     <div class="container">
       <div class="row flex justify-between items-center py-5 lg:py-0 lg:border-b border-grayish-blue">
@@ -66,7 +55,7 @@
           <div class="mobile-menu-wrapper fixed top-0 left-0 w-full h-full bg-black/75 z-20 hidden" id="mobile-menu">
             <nav class="mobile-menu fixed top-0 left-0 w-[70%] h-full bg-white">
               <div class="container">
-                <button class="menu-toggler open-menu h-16 flex justify-start items-center md:h-24" id="close-menu"
+                <button class="menu-toggler open-menu h-[100px] flex justify-start items-center md:h-24" id="close-menu"
                   name="Close mobile menu">
                   <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -98,17 +87,37 @@
         </div>
         <div class="col right gap-5 md:gap-12">
           <div class="group cart-wrapper relative">
-            <div class="icon cursor-pointer py-5">
+            <div class="icon cursor-pointer py-5" id="cart-icon">
               <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
                   fill="#69707D" fill-rule="nonzero" />
               </svg>
             </div>
-            <div class="cart bg-white shadow-cart rounded-lg hidden group-hover:block fixed top-24 left-1/2 -translate-x-1/2 z-30 w-[96%] md:w-80 md:left-auto md:translate-x-0 md:right-[2rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-14" id="cart">
+            <div
+              class="cart bg-white shadow-cart rounded-lg hidden group-hover:block fixed top-28 left-1/2 -translate-x-1/2 z-30 w-[92%] md:w-80 md:left-auto md:translate-x-0 md:right-[2rem] lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-14 lg:min-w-80 lg:w-fit"
+              id="cart">
               <h2 class="cart-heading text-lg font-semibold p-4 border-b light-grayish-blue">Cart</h2>
               <div class="cart-items-wrapper p-4 flex justify-center items-center">
-                  <p class="empty-state text-dark-grayish-blue">Your cart is empty.</p>
+                <p class="empty-state text-dark-grayish-blue whitespace-nowrap block" id="cart-is-empty">Your cart is empty.</p>
+                <div class="products-wrapper hidden" id="cart-products">
+                  <div class="product-in-cart flex items-center gap-4">
+                    <div class="product-img min-w-12 w-12 h-12 rounded-md overflow-hidden">
+                      <img src="./assets/images/image-product-1-thumbnail.jpg" alt="Fall Limited Edition Sneakers">
+                    </div>
+                    <div class="product-info">
+                      <h2 class="title whitespace-nowrap">Fall Limited Edition Sneakers</h2>
+                      <div class="price flex gap-2">
+                        <p class="single-price" id="single-price"></p>
+                        <p class="cart-qty text-grayish-blue" id="cart-qty"></p>
+                        <strong class="total-price text-very-dark-blue font-bold" id="total-price">$125.00</strong>
+                      </div>
+                    </div>
+                    <div class="delete-product cursor-pointer w-3" id="delete-product">
+                      <img src="./assets/images/icon-delete.svg" class="" alt="Delete product from cart">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -210,7 +219,7 @@
 
           <div class="pricing mt-7 flex flex-wrap justify-between items-center">
             <div class="left flex items-center gap-4 lg:w-full">
-              <h1 class="current-price">$125.00</h1>
+              <h1 class="current-price" id="current-price">$ <span>125.00</span></h1>
               <span class="discount text-orange text-xs py-1 px-2 rounded-sm font-bold bg-orange/30">50%</span>
             </div>
             <div class="right lg:pt-2">
@@ -235,7 +244,7 @@
 
               <input type="number"
                 class="qty text-center text-lg bg-transparent text-very-dark-blue font-bold outline-none w-16" id="qty"
-                min="0" value="0" readonly>
+                min="1" value="1" readonly>
 
               <button class="qty-control plus" id="qty-plus">
                 <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +260,7 @@
             </div>
 
             <button
-              class="bg-orange text-white w-full rounded-lg py-4 flex justify-center items-center gap-4 font-medium shadow-main lg:col-span-2 custom-transition hover:bg-orange/60">
+              class="bg-orange text-white w-full rounded-lg py-4 flex justify-center items-center gap-4 font-medium shadow-main lg:col-span-2 custom-transition hover:bg-orange/60" id="add-to-cart-btn">
               <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"

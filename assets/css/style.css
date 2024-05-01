@@ -667,7 +667,7 @@ header .col{
 .desktop-menu a::after {
   content: '';
   position: absolute;
-  top: calc(100% + 3px);
+  /* top: calc(100% + 3px); */
   left: 0;
   width: 100%;
   height: 1px;
@@ -781,6 +781,15 @@ header .col{
   stroke: hsl(26, 100%, 55%);
 }
 
+.product-in-cart .title,
+    .product-in-cart .single-price{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: hsl(220 14% 75% / var(--tw-text-opacity));
+}
+
 @media (min-width: 1024px) {
   main {
     height: calc(100vh - 96px);
@@ -886,8 +895,8 @@ header .col{
   top: 50%;
 }
 
-.top-24{
-  top: 6rem;
+.top-28{
+  top: 7rem;
 }
 
 .isolate{
@@ -1078,20 +1087,20 @@ header .col{
   display: none;
 }
 
+.h-12{
+  height: 3rem;
+}
+
 .h-14{
   height: 3.5rem;
 }
 
-.h-16{
-  height: 4rem;
-}
-
-.h-20{
-  height: 5rem;
-}
-
 .h-6{
   height: 1.5rem;
+}
+
+.h-\[100px\]{
+  height: 100px;
 }
 
 .h-full{
@@ -1102,12 +1111,16 @@ header .col{
   height: 100vh;
 }
 
+.w-12{
+  width: 3rem;
+}
+
 .w-16{
   width: 4rem;
 }
 
-.w-20{
-  width: 5rem;
+.w-4{
+  width: 1rem;
 }
 
 .w-6{
@@ -1126,8 +1139,8 @@ header .col{
   width: 70%;
 }
 
-.w-\[96\%\]{
-  width: 96%;
+.w-\[92\%\]{
+  width: 92%;
 }
 
 .w-\[this-is\\\\\]{
@@ -1144,6 +1157,18 @@ header .col{
 
 .w-full{
   width: 100%;
+}
+
+.w-5{
+  width: 1.25rem;
+}
+
+.w-3{
+  width: 0.75rem;
+}
+
+.min-w-12{
+  min-width: 3rem;
 }
 
 .max-w-\[460px\]{
@@ -1696,6 +1721,10 @@ header .col{
   justify-items: stretch;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -2187,23 +2216,8 @@ header .col{
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: hsl(0 0% 0% / var(--tw-bg-opacity));
-}
-
 .bg-black\/75{
   background-color: hsl(0 0% 0% / 0.75);
-}
-
-.bg-dark-grayish-blue{
-  --tw-bg-opacity: 1;
-  background-color: hsl(219 9% 45% / var(--tw-bg-opacity));
-}
-
-.bg-grayish-blue{
-  --tw-bg-opacity: 1;
-  background-color: hsl(220 14% 75% / var(--tw-bg-opacity));
 }
 
 .bg-light-grayish-blue{
@@ -2220,18 +2234,8 @@ header .col{
   background-color: hsl(26 100% 55% / 0.3);
 }
 
-.bg-pale-orange{
-  --tw-bg-opacity: 1;
-  background-color: hsl(25 100% 94% / var(--tw-bg-opacity));
-}
-
 .bg-transparent{
   background-color: transparent;
-}
-
-.bg-very-dark-blue{
-  --tw-bg-opacity: 1;
-  background-color: hsl(220 13% 13% / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -3103,10 +3107,6 @@ header .col{
     top: 3.5rem;
   }
 
-  .lg\:top-12{
-    top: 3rem;
-  }
-
   .lg\:col-span-1{
     grid-column: span 1 / span 1;
   }
@@ -3139,8 +3139,21 @@ header .col{
     display: none;
   }
 
+  .lg\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .lg\:w-full{
     width: 100%;
+  }
+
+  .lg\:w-80{
+    width: 20rem;
+  }
+
+  .lg\:min-w-80{
+    min-width: 20rem;
   }
 
   .lg\:-translate-x-1\/2{

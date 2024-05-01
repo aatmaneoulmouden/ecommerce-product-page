@@ -27,7 +27,7 @@ function handleQty() {
     });
 
     minusBtn.addEventListener('click', () => {
-        if (qty.value > 0) {
+        if (qty.value > 1) {
             qty.value--;
         }
     });
@@ -35,6 +35,79 @@ function handleQty() {
 
 handleQty();
 
+/**
+ * CART : Add items and remove them
+ */
+const cartIsEmptyMsg = document.querySelector('#cart-is-empty');
+const cartProductsWrapper = document.querySelector('#cart-products');
+
+const cart = {
+    'hasItem': false,
+    'itemsCount': 0,
+    'singlePrice': 0,
+}
+
+
+const hideProductShowMessage = () => {
+    // Show empty cart message
+    cartIsEmptyMsg.classList.remove('hidden');
+    cartIsEmptyMsg.classList.add('block');
+
+    // Hide cart products
+    cartProductsWrapper.classList.remove('block');
+    cartProductsWrapper.classList.add('hidden');
+};
+
+const showProductHideMessage = () => {
+    // Hide empty cart message
+    cartIsEmptyMsg.classList.remove('block');
+    cartIsEmptyMsg.classList.add('hidden');
+
+    // Show cart products
+    cartProductsWrapper.classList.remove('hidden');
+    cartProductsWrapper.classList.add('block');
+};
+
+// Add item to cart
+function addToCart() {
+    const addToCartBtn = document.querySelector('#add-to-cart-btn');
+    const qty = document.querySelector('#qty');
+    const currentSinglePrice = document.querySelector('#current-price span');
+    const cartSinglePricePlaceholder = document.querySelector('#single-price');
+    const cartQtyPlaceholder = document.querySelector('#cart-qty');
+    const cartTotalPricePlaceholder = document.querySelector('#total-price');
+
+    addToCartBtn.addEventListener('click', () => {
+        cart.hasItem = true;
+        cart.singlePrice = parseFloat(currentSinglePrice.textContent).toFixed(2);
+        cart.itemsCount = parseInt(qty.value);
+
+        let { singlePrice, itemsCount } = cart;
+
+        cartSinglePricePlaceholder.textContent = "$" + singlePrice;
+        cartQtyPlaceholder.textContent = "x" + itemsCount;
+
+        let totalPrice = (singlePrice * itemsCount).toFixed(2);
+
+        cartTotalPricePlaceholder.textContent = "$" + totalPrice;
+
+        showProductHideMessage();
+    });
+}
+
+addToCart();
+
+// Delete item from cart
+function removeItem() {
+    const deleteItemBtn = document.querySelector('#delete-product');
+
+    deleteItemBtn.addEventListener('click', () => {
+        cart.hasItem = false;
+        hideProductShowMessage();
+    });
+}
+
+removeItem();
 
 // Open/close the lightbox
 function lightboxHandler() {
