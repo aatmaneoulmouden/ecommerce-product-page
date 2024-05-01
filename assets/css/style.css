@@ -1119,8 +1119,8 @@ header .col{
   width: 4rem;
 }
 
-.w-4{
-  width: 1rem;
+.w-3{
+  width: 0.75rem;
 }
 
 .w-6{
@@ -1157,14 +1157,6 @@ header .col{
 
 .w-full{
   width: 100%;
-}
-
-.w-5{
-  width: 1.25rem;
-}
-
-.w-3{
-  width: 0.75rem;
 }
 
 .min-w-12{
@@ -3146,10 +3138,6 @@ header .col{
 
   .lg\:w-full{
     width: 100%;
-  }
-
-  .lg\:w-80{
-    width: 20rem;
   }
 
   .lg\:min-w-80{
